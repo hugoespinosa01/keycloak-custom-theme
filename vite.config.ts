@@ -7,7 +7,15 @@ export default defineConfig({
     plugins: [
         react(),
         keycloakify({
-            accountThemeImplementation: "none"
+            kcContextExclusionsFtl: `
+            <#if (
+                key == "domainsToSkipLa" &&
+                areSamePath(path, []) 
+            )>
+                <#continue>
+            </#if>
+        `,
+            accountThemeImplementation: "none",
         })
     ]
 });
