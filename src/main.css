@@ -1,0 +1,139 @@
+/* Imports de fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Contenedor principal */
+body.kcBodyClass {
+    display: flex;
+    height: 100vh;
+    background: url('./login/assets/background.jpg') no-repeat center center fixed; /* Usa la ruta correcta aquí */
+    background-size: cover;
+    overflow: hidden;
+    margin: 0;
+}
+
+/* Ocultar la división izquierda ya que usamos el fondo global */
+.kcLoginClass {
+    display: none;
+}
+
+body {
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+/* Contenedor del formulario */
+.login-pf-page {
+    max-width: 500px;
+    height: 100vh;
+    margin-left: auto;
+    background: transparent;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Card del formulario */
+.card-pf {
+    height: 100vh;
+    border-radius: 10px;
+    width: 100%;
+    padding: 2rem;
+    margin: auto;
+}
+
+/* Estilos del logo y título */
+.login-pf-page-header {
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+#keycloak-kardex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    margin-top: 10vh;
+    gap: 17px;
+}
+
+/* Logo */
+#kc-logo {
+    width: 35px; 
+    height: auto; 
+}
+
+#logoTitle {
+    font-family: 'Hammersmith One', serif;
+    font-weight: 400;
+    color: black;
+    font-style: normal;
+}
+
+/* Campos de formulario */
+.form-control {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+}
+
+
+/* Botón de inicio de sesión */
+.kcButtonClass {
+    width: 100%;
+    padding: 0.5rem; /* Reducir el alto del botón */
+    background-color: #a31055 !important;
+    color: white !important;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+/* Ocultar elementos innecesarios */
+.login-pf-page #kc-header,
+.kcInfoAreaWrapperClass {
+    display: none !important;
+}
+
+/* Media queries para responsive */
+@media (max-width: 768px) {
+    
+    body.kcBodyClass {
+        flex-direction: column;
+    }
+
+    .login-pf-page {
+        width: 100%;
+        margin-left: 0;
+        padding: 1rem;
+    }
+
+    .card-pf {
+        padding: 2rem;
+        box-shadow: none;
+    }
+
+    .form-control {
+        width: 100%;
+        max-width: none;
+    }
+
+    .kcButtonClass {
+        width: 100%;
+    }
+}
